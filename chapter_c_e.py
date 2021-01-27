@@ -4,7 +4,7 @@ print("十六进制：" + hex(num))
 print("八进制："+ oct(num))
 # 接下来换算二进制
 msg = ''
-while num > 1 :  # 用“除二法”求十进制的二进制
+while num > 1 :  # 用“除二法”求十进制数的二进制表示
     num, rem = divmod(num, 2)  # rem非0即1
     msg += str(rem) 
 msg = '1' + msg
