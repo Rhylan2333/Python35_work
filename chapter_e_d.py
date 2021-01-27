@@ -14,7 +14,7 @@ def isPrime(num) :
 
 
 def printPrime() :
-    for i in range(0, 201) :
+    for i in range(0, 200) :
         if (isPrime(i)) :
             print(i, end=" ")
         else :
