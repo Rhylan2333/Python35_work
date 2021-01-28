@@ -14,6 +14,8 @@ def isPrime(num) :
 
 
 def printPrime() :
+    """用一下isPrime()，输出小于200的质数"""
+    print("小于200的素数如下：")
     for i in range(0, 200) :
         if (isPrime(i)) :
             print(i, end=" ")
