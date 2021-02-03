@@ -38,7 +38,10 @@ def Create_matrix() :
         line = ""
         for j in range(10) :
             line += "{} ".format(random.randint(0,9))
-        matrix +="{}".format(line).rstrip() + "\n"  # 剔除末尾空格再换行
+        if i <= 8 :
+            matrix +="{}".format(line).rstrip() + "\n"  # 剔除末尾空格再换行
+        else :
+            matrix +="{}".format(line).rstrip()
     return matrix
 
 
