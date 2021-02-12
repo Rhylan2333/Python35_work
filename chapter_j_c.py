@@ -3,6 +3,8 @@ import jieba as j
 
 filename = "chapter_j_c.txt"
 
+excludes = {'我们'}
+
 f = open(filename, "r", encoding='UTF-8' )
 txt = f.read()
 f.close()
@@ -16,6 +18,9 @@ for word in words :
         continue
     else :
         counts[word] = counts.get(word, 0) +1
+
+for word in excludes :  # 剔除不想统计的词
+    del(counts[word])
 
 ls_items = list(counts.items())  # 获取统计dict
 
