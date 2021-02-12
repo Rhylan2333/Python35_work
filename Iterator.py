@@ -2,8 +2,8 @@
 d = {"a": 1, "b": 2, "c": 3}
 res = d.__iter__()  # 对key迭代
 print("这里对dict调用__iter__()方法后：", res)
-while True:
-    try:
+while True :
+    try :
         print(res.__next__())
     except StopIteration :
         print("StopIteration，到尾了。")
@@ -15,8 +15,8 @@ print("\n{:-^44}\n".format('分割线'))
 # 步骤： 1、调用迭代器  2、取值
 res = d.__iter__()
 print("对dict再调用一次__iter__()才能通过__next__()取值")
-while True:
-    try:
+while True :
+    try :
         print(res.__next__())
     except StopIteration :
         print("StopIteration，到尾了。")
