@@ -36,14 +36,24 @@ def drawGround() :
         forward(randint(40,100))  # 全闭
 
 
+def drawCongratuation() :
+    color('red')  # 文字表示颜色
+    penup()
+    goto(-140, -50)
+    pendown()
+    write("牛年牛逼！！！", font=("Calibra", 36, "bold"))
+    hideturtle()
+
+
 
 def main() :
     setup(800, 600, 200, 100)
     tracer(False)
-    bgcolor('black')
+    bgcolor('white')
     drawSnow()
     drawGround()
-    done()
+    drawCongratuation()
+    done()  # 用来停止画笔绘制，但绘图窗口不关闭。
 
 
 
