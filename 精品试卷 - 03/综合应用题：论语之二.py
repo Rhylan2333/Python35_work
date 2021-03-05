@@ -14,14 +14,12 @@ fo = open("论语-提纯原文.txt", "w")
 ##IDXs = set(IDXs)
 string = fi.read()
 i = 0
-while i < len(string):  # 必须小于，不然超出范围，因为while先做后加，引锁前闭后开
-    if string[i] != "(" :
+while i < len(string):  # 必须小于，不然超出范围，因为while先做后加，引索前闭后开
+    if string[i] == "(" :
+        fo.write(string[i+3])  # (X)三个字符
+        i += 4  # 下次从第四个字符判断
+    else :
         fo.write(string[i])
         i += 1
-    elif string[i] == "(" :
-        fo.write(string[i+3])  # (X)三个字符
-        i += 4  # x下次从第四个字符判断
-    else :
-        pass
 fi.close()
 fo.close()
