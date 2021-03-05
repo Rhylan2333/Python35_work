@@ -21,5 +21,7 @@ for i in range(len(ls)) :
         fo.write(ls[i+1] + "\n")
     else :
         continue
+fo = open("论语-原文.txt", "r")
+fo.write(fo.read().strip("\n"))
 fi.close()
 fo.close()
