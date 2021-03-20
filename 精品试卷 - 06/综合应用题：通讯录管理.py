@@ -96,7 +96,7 @@ while flag:
         print("请重新输入")
         flag = True
 
-if ch == 1:
+if ch == 1:  # 留意这里的缩进，为了符合题意，故把“ch”从while循环中提出来
     display()
 elif ch == 2:
     insertrec()
