@@ -1,10 +1,11 @@
+# -*- coding:utf-8 -*-
 # 请在...处使用多行代码替换
 #
 # 注意：其他已给出代码仅作为提示，可以修改
 
 #PY301-1
 
-# -*- coding:utf-8 -*-
+
 
 f = open("score.txt","r",encoding='UTF-8')
 D = [] #单个学生的数据
