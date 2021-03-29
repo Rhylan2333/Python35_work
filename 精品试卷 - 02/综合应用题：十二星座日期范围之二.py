@@ -12,9 +12,16 @@ for i in range(len(lines)) :
 s = input("请输入星座序号(例如,5 10):")  # 是序号不是月日，仔细审题
 while s != '' :
     ls_num = s.split()
+    numbers = []
+    for row in ls[1:]:  # “序号”是突破点
+        numbers.append(row[0])
     for i in ls_num :
-        for row in ls[1:]:  # “序号”是突破点
-            if i == row[0] :
-                print("{}({})的生日是{}月{}日至{}月{}日之间".format(row[1], row[4], row[2][:-2], row[2][-2:], row[3][:-2], row[3][-2:]))
+        if i in numbers:
+            index = int(i)
+            print("{}({})的生日是{}月{}日至{}月{}日之间".format(ls[index][1], ls[index][4], ls[index][2][:-2], ls[index][2][-2:], ls[index][3][:-2], ls[index][3][-2:]))
+            continue
+        else:
+            print("输入星座序号有误！")
+            continue
     s = input("请输入星座序号(例如,5 10):")
 csv.close()
